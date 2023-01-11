@@ -1,5 +1,3 @@
-// There are many ways to pick a DOM node; here we get the form itself and the email
-// input box, as well as the span element into which we will place the error message.
 const form = document.querySelector('form');
 const uname = document.getElementById('uname');
 const email = document.querySelector('#email');
