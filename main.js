@@ -11,6 +11,10 @@ form.addEventListener('submit', e => {
   if (!form.checkValidity()) {
     console.log(e);
     showError();
+  } else {
+    errorToggle();
+    errorMsgSpan.textContent = 'Form submitted.';
+    clearFields();
   }
 });
 
@@ -61,6 +65,13 @@ function showError() {
     errorMsgSpan.textContent =
       'Phone entries must be either 10 digits in a row or a pattern of three digits, three digits, then four digits, separated by either spaces, dashes, or dots';
   }
+}
+
+function clearFields() {
+  uname.value = '';
+  email.value = '';
+  phone.value = '';
+  comment.value = '';
 }
 
 function errorToggle() {
